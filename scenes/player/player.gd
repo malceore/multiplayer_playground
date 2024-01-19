@@ -8,6 +8,7 @@ extends CharacterBody2D
 @export var it = false
 
 func _ready():
+	$Label.text = name
 	if it:
 		$Body.set_color(Color.RED)
 
