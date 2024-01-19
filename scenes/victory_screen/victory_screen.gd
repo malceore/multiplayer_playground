@@ -1,5 +1,5 @@
 extends Control
 
 func winner(player:String):
-	$Label.set_text(player)
+	$Label.set_text(player+" WINS")
 	show()
