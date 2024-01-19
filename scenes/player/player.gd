@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+
+
 @export var speed = 400
 @export var left = "left"
 @export var right = "right"
