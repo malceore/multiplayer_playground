@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccvvwbcptp2a6"]
+
+[ext_resource type="PackedScene" uid="uid://cvok510p82m5y" path="res://scenes/player/player.tscn" id="1_dv7lv"]
+
+[node name="TestArena" type="Node2D"]
+
+[node name="Player1" parent="." instance=ExtResource("1_dv7lv")]
+position = Vector2(-349, 0)
+it = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Player2" parent="." instance=ExtResource("1_dv7lv")]
+position = Vector2(274, 0)
+left = "arrow_L"
+right = "arrow_R"
+up = "arrow_U"
+down = "arrow_D"
