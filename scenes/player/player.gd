@@ -9,8 +9,7 @@ extends CharacterBody2D
 
 func _ready():
 	if it:
-		#$Body.add_theme_color_override("RED", Color.RED)
-		$Body.theme_override_styles.panel(Color.RED)
+		$Body.set_color(Color.RED)
 
 func get_input():
 	var input_direction = Input.get_vector(left, right, up, down)
