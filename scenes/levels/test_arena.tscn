@@ -20,9 +20,45 @@ up = "arrow_U"
 down = "arrow_D"
 
 [node name="TimerContainer" parent="." instance=ExtResource("2_v4ema")]
-position = Vector2(0, -286)
+position = Vector2(2, -324)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -437.0
+offset_top = -174.0
+offset_right = -223.0
+offset_bottom = -59.0
+text = "Player 1:
+W- Up
+A- Left
+S- Down
+D- Right"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 185.0
+offset_top = -174.0
+offset_right = 378.0
+offset_bottom = -59.0
+text = "Player 2:
+Arrow Key Up- Up
+Arrow Key Left- Left
+Arrow Key Down- Down
+Arrow Key Right- Right"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = -139.0
+offset_top = 197.0
+offset_right = 115.0
+offset_bottom = 396.0
+text = "DIRECTIONS:
+Tag the other player and have fun, if you don't have fun you have lost you don't wanna lose right? "
+fit_content = true
+scroll_active = false
 
 [node name="VictoryScreen" parent="." instance=ExtResource("3_kljvt")]
 visible = false
