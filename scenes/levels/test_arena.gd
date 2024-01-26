@@ -1,10 +1,20 @@
 extends Node2D
 
+var itPlayer = null
+var notItPlayer = null
+
 func _ready():
-	pass # Replace with function body.
+	for child in get_children():
+		if child.name.contains("Player"):
+			if child.it:
+				itPlayer = child
+			else:
+				notItPlayer = child
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if $TimerContainer/Timer.time_left == 0:
-		$VictoryScreen.winner("Player 2")
+		$VictoryScreen.winner(notItPlayer.name, notItPlayer.get_node("Body").color)
+	if itPlayer.win:
+		$VictoryScreen.winner(itPlayer.name, itPlayer.get_node("Body").color)
+	
