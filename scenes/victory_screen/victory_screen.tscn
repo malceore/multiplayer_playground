@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dce4osgytdv5x"]
+[gd_scene load_steps=3 format=3 uid="uid://dce4osgytdv5x"]
 
 [ext_resource type="Script" path="res://scenes/victory_screen/victory_screen.gd" id="1_37t8c"]
+[ext_resource type="PackedScene" uid="uid://hey2wphj6kdt" path="res://scenes/timer/timer.tscn" id="2_c2qsc"]
 
 [node name="VictoryScreen" type="Control"]
 layout_mode = 3
@@ -25,3 +26,17 @@ offset_right = 665.0
 offset_bottom = 313.0
 theme_override_font_sizes/font_size = 40
 text = "Player"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 363.0
+offset_right = 527.0
+offset_bottom = 388.0
+text = "Next Match will begin in:"
+fit_content = true
+scroll_active = false
+context_menu_enabled = true
+
+[node name="TimerContainer" parent="." instance=ExtResource("2_c2qsc")]
+time = 11
