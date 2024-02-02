@@ -2,6 +2,7 @@ extends Node2D
 
 var itPlayer = null
 var notItPlayer = null
+var playing = true
 
 func _ready():
 	for child in get_children():
@@ -11,10 +12,13 @@ func _ready():
 			else:
 				notItPlayer = child
 
-
 func _process(delta):
-	if $TimerContainer/Timer.time_left == 0:
+	if !playing:
+		return
+	if $TimerContainer.times_up:
 		$VictoryScreen.winner(notItPlayer.name, notItPlayer.get_node("Body").color)
+		playing = false
 	if itPlayer.win:
 		$VictoryScreen.winner(itPlayer.name, itPlayer.get_node("Body").color)
-	
+		$TimerContainer.stop()
+		playing = false

@@ -22,3 +22,5 @@ bbcode_enabled = true
 text = "[center]00:00"
 fit_content = true
 scroll_active = false
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -21,6 +21,7 @@ down = "arrow_D"
 
 [node name="TimerContainer" parent="." instance=ExtResource("2_v4ema")]
 position = Vector2(2, -324)
+autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -62,7 +63,7 @@ scroll_active = false
 
 [node name="VictoryScreen" parent="." instance=ExtResource("3_kljvt")]
 visible = false
-offset_left = -577.0
-offset_top = -328.0
-offset_right = -577.0
-offset_bottom = -328.0
+offset_left = 14.0
+offset_top = 17.0
+offset_right = 14.0
+offset_bottom = 17.0
