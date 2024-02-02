@@ -1,0 +1,105 @@
+[gd_scene load_steps=11 format=3 uid="uid://c6pympy5oa5w4"]
+
+[ext_resource type="Texture2D" uid="uid://jn84it4psmoe" path="res://scenes/levels/merrygoround/graphic.png" id="1_qdp1w"]
+[ext_resource type="PackedScene" uid="uid://dhu6crv2ms08k" path="res://scenes/component/spinning_component.tscn" id="2_wue7g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0whya"]
+size = Vector2(22.5, 665)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2rlx"]
+size = Vector2(1161, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sa12o"]
+size = Vector2(1167.25, 19.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwb7c"]
+size = Vector2(18.5, 657)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0h3i7"]
+size = Vector2(41, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_clpoh"]
+size = Vector2(41, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ateif"]
+size = Vector2(41, 38.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_la74x"]
+size = Vector2(40, 39)
+
+[node name="merrygoround" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(584, 327)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(562, 327)
+texture = ExtResource("1_qdp1w")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(17.25, 316.5)
+shape = SubResource("RectangleShape2D_0whya")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(587.5, -5)
+shape = SubResource("RectangleShape2D_t2rlx")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(587.375, 640.875)
+shape = SubResource("RectangleShape2D_sa12o")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1161, 317)
+shape = SubResource("RectangleShape2D_kwb7c")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+position = Vector2(584, 328)
+
+[node name="ColorRect" type="ColorRect" parent="AnimatableBody2D"]
+offset_left = -20.0
+offset_top = -268.0
+offset_right = 20.0
+offset_bottom = -228.0
+color = Color(1, 1, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="AnimatableBody2D"]
+offset_left = -251.0
+offset_top = -17.0
+offset_right = -211.0
+offset_bottom = 23.0
+color = Color(1, 1, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="AnimatableBody2D"]
+offset_left = -22.0
+offset_top = 204.0
+offset_right = 18.0
+offset_bottom = 244.0
+color = Color(1, 1, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="AnimatableBody2D"]
+offset_left = 191.0
+offset_top = -17.0
+offset_right = 231.0
+offset_bottom = 23.0
+color = Color(1, 1, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+position = Vector2(-0.5, -248)
+shape = SubResource("RectangleShape2D_0h3i7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AnimatableBody2D"]
+position = Vector2(-230.5, 3.5)
+shape = SubResource("RectangleShape2D_clpoh")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="AnimatableBody2D"]
+position = Vector2(-1.5, 223.75)
+shape = SubResource("RectangleShape2D_ateif")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="AnimatableBody2D"]
+position = Vector2(211, 3.5)
+shape = SubResource("RectangleShape2D_la74x")
+
+[node name="spinningComponent" parent="AnimatableBody2D" instance=ExtResource("2_wue7g")]
+position = Vector2(-584, -328)
