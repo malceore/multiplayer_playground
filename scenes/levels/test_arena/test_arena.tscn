@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccvvwbcptp2a6"]
+[gd_scene load_steps=6 format=3 uid="uid://ccvvwbcptp2a6"]
 
 [ext_resource type="PackedScene" uid="uid://cvok510p82m5y" path="res://scenes/player/player.tscn" id="1_dv7lv"]
-[ext_resource type="Script" path="res://scenes/levels/test_arena.gd" id="1_ryifq"]
+[ext_resource type="Script" path="res://scenes/levels/test_arena/test_arena.gd" id="1_ryifq"]
 [ext_resource type="PackedScene" uid="uid://hey2wphj6kdt" path="res://scenes/timer/timer.tscn" id="2_v4ema"]
 [ext_resource type="PackedScene" uid="uid://dce4osgytdv5x" path="res://scenes/victory_screen/victory_screen.tscn" id="3_kljvt"]
+[ext_resource type="PackedScene" uid="uid://dv6rmtrh3dsyo" path="res://scenes/tools/scene_switcher/scene_switcher.tscn" id="5_ee6qe"]
 
 [node name="TestArena" type="Node2D"]
 script = ExtResource("1_ryifq")
@@ -67,3 +68,5 @@ offset_left = 14.0
 offset_top = 17.0
 offset_right = 14.0
 offset_bottom = 17.0
+
+[node name="SceneSwitcher" parent="." instance=ExtResource("5_ee6qe")]

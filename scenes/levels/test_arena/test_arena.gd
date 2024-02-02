@@ -18,7 +18,14 @@ func _process(delta):
 	if $TimerContainer.times_up:
 		$VictoryScreen.winner(notItPlayer.name, notItPlayer.get_node("Body").color)
 		playing = false
+		changeScene("Maze")
+		return
 	if itPlayer.win:
 		$VictoryScreen.winner(itPlayer.name, itPlayer.get_node("Body").color)
 		$TimerContainer.stop()
 		playing = false
+		changeScene("Merrygoround")
+		return
+
+func changeScene(sceneName):
+	$SceneSwitcher.changeScene(sceneName)
